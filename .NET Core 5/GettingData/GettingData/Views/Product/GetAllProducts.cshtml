@@ -1,0 +1,29 @@
+﻿@using GettingData.Models
+@model List<Product>
+
+
+    <h2>Bütün ürünler Listelendi</h2>
+
+<ul>
+    @foreach (Product item in Model)
+    {
+        <li>
+            @item.ProductName
+        </li>
+    }
+
+</ul>
+
+<h2 style="text-align:center">Kullanıcı ekleme sayfası</h2>
+
+<form action="/Product/AddProducts" method="post">
+    <label for="name">Ürün ismi</label> <br />
+    <input type="text" id="name" name="ProductName" /> <br />
+       <label for="categorname" >Kategori</label> <br />
+       <input type="text" id="categoryname" name="categoryname" />  <br />
+       <input type="submit" value="Ürün ekle" />
+
+
+
+
+</form>

@@ -1,0 +1,12 @@
+﻿@model List<Film>
+
+<h2 style="text-align:center">Filmler Listesi</h2> <br />
+
+<ul>
+
+    @foreach (Film item in Model)
+    {
+        <li>@item.MovieName</li>
+    }
+
+</ul>

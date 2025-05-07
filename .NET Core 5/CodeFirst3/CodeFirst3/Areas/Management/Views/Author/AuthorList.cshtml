@@ -1,0 +1,37 @@
+﻿@model List<Author>
+
+
+<h3 class="text-center">Yazar Listeleme sayfası</h>
+
+    <a class="btn btn-primary" style="float:right" asp-controller="Author" asp-area="Management" asp-action="Create">Yeni ekle</a>
+
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>Aksiyonlar</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@(i+1)</td>
+                    <td>@Model[i].FirstName</td>
+                    <td>@Model[i].LastName</td>
+                    <td>
+                        <a class="big-icon" asp-controller="Author" asp-action="Edit" asp-area="Management" asp-route-id="@Model[i].ID"><i class="bi bi-save"></i></a>
+                        <a class="big-icon" asp-action="Delete" asp-route-id="@Model[i].ID" asp-area="Management" asp-controller="Author">
+                            <i class="bi bi-x-circle"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>

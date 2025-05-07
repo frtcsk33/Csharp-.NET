@@ -1,0 +1,36 @@
+﻿- AppUser 
+
+- AppUserDetail
+
+- Product
+
+- Category
+
+- Order
+
+- OrderDetail
+
+
+----------------
+
+one-to-one
+
+- AppUser - AppUserDetail
+
+one-to-many
+
+- AppUser - Order
+
+- Category - Product
+
+
+
+-Product - OrderDetail
+
+-Order - OrderDetail
+
+
+many-to-many(çoka çok bir ilişki için bir tane daha tablo oluşturulur. OrderDetail)
+
+product - order
+

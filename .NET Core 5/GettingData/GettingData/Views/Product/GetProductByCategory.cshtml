@@ -1,0 +1,27 @@
+﻿@using GettingData.Models
+@model List<Product>
+
+
+
+@if (ViewData["Error"] != null) {
+
+
+
+<b>@ViewData["Error"].ToString()</b>
+
+            }
+ else
+ {
+    <h2>Seçilen Kategoriye göre ürünler: </h2>
+
+    <ul>
+        @foreach (Product item in Model)
+        {
+            <li>@item.ProductName</li>
+        }
+    </ul>
+   
+
+}
+
+

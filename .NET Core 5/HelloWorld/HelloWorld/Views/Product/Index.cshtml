@@ -1,0 +1,40 @@
+﻿@*Yorum satırı*@
+
+<p>
+    @DateTime.Now <span>Şimdiki zaman paylaşıldı.</span>
+</p>
+
+
+@{ 
+    string name = "abdullah";
+    string surname = "yeşil";
+    int age = 27;
+
+    string fullname = $"{name} {surname}";
+
+} 
+
+<p>
+    fullname:@fullname
+</p>
+
+<p>
+    @{
+        if (name == "abdullah")
+        {
+        <ul>
+            <li>@name</li>
+            <li>@surname</li>
+            <li>@age</li>
+        </ul>          }
+            else
+            {
+            <span>eşleşme sağlanamadı</span>
+            }
+
+
+    }
+</p>
+
+
+@(name +" " +surname)

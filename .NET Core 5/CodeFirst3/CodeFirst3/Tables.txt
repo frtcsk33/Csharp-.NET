@@ -1,0 +1,9 @@
+﻿one-to-many ilişki
+- books - authors  (Yazar:Martin, Kitapları: 6 tane)
+- books - BookTypes (type:Fantastik, books: 4-5 tane)
+
+
+
+many-to-many
+
+- Students - Books (ortak talbo Operations tablosu)
